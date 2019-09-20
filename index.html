@@ -12,21 +12,35 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="message-container">Messages go hee</div>
-        <form id="sending"> 
-            <input type="text" id="messgageinput"> </input>
-            <button type="submit" id="sendbutton"> send </button>
-        </form>
+    
+        <!-- connects to the server and displays results -->
+
+        <div class=”container”>
+            <br>
+            <div class=”jumbotron”>
+            <h1 class=”display-4">Send Message</h1>
+            <br>
+            <input id = “name” class=”form-control” placeholder=”Name”>
+            <br>
+            <textarea id = “message” class=”form-control” placeholder=”Your Message Here”>
+           </textarea>
+            <br>
+            <button id=”send” class=”btn btn-success”>Send</button>
+            </div>
+            <div id=”messages”>
+            
+           </div>
+           </div>
 
         
-        <script src="http://localhost:3000/socket.io/socket.io.js" async defer></script>
+        <!-- <script src="http://localhost:3000/socket.io/socket.io.js" async defer></script> -->
          
-        <script src="/script.js" async defer></script>
-        <script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+        <script src="socket.io/socket.io.js"></script> 
         <script src="/socket.io/socket.io.js"></script>
+        <script src="/clientS.js"></script>
+        <!-- <script>
+            var socket = io();
+        </script> -->
 
     </body>
 </html>
